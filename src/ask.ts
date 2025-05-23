@@ -12,9 +12,8 @@ app.get('/', (req, res) => {
     const db = loadDB();
     const domain = req.query.domain as string;
 
-    if (db.domains.includes(domain)) {
-        return res.send('ok');
-    }
+    if (!domain) return res.status(400).send('missing domain');
+    if (db.domains.includes(domain)) return res.send('ok');
 
     res.status(403).send('unauthorized');
 });
