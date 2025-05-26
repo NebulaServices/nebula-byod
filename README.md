@@ -3,7 +3,7 @@ Discord Bot + Caddy Ask Server
 
 ## Setup
 ```sh
-$ git clone https://github.com/nebualservices/nebula-byod.git
+$ git clone https://github.com/nebulaservices/nebula-byod.git
 $ cd nebula-byod
 $ pnpm i
 $ pnpm build
