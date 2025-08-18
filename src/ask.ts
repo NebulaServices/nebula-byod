@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
     const domain = req.query.domain as string;
 
     if (!domain) return res.status(400).send('missing domain');
-    if (db.domains.includes(domain)) return res.send('ok');
+    if (db.domains.includes(domain)) return res.send('yes');
 
     res.status(403).send('unauthorized');
 });
